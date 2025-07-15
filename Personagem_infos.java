@@ -12,7 +12,7 @@ public class Personagem_infos{
         arqueiro.forca = 0;
         System.out.println("O seu inimigo é: "+arqueiro.nome+" | Classe: "+arqueiro.classe+"| Força: "+arqueiro.forca);
         arqueiro.desenharPersonagem();
-        System.out.println("");
+        System.out.println();
 
         Personagem guerreiro = new Personagem();
         System.out.println("Informe o nome do seu herói: ");
@@ -44,11 +44,7 @@ public class Personagem_infos{
 
             switch(escolha){
             
-            case 1: guerreiro.atacar(); arqueiro.receberDano(8);
-                if (arqueiro.vida > 0){ 
-                arqueiro.usarHabilidadeEspecial();
-                guerreiro.receberDano(18);
-                }
+            case 1: guerreiro.atacar(); arqueiro.receberDano(8); arqueiro.usarHabilidadeEspecial(); guerreiro.receberDano(18);  
             break;
 
             case 2: guerreiro.usarHabilidadeEspecial(); arqueiro.receberDano(15); guerreiro.subirNivel();
@@ -57,8 +53,18 @@ public class Personagem_infos{
             case 3: guerreiro.mostrarStatus();
             break;
 
-            case 4: guerreiro.vida = 100; guerreiro.forca = 0; guerreiro.nivel = 1; arqueiro.vida = 100; arqueiro.forca = 0; System.out.println("Jogo reiniciado. Os personagens foram resetados");
-            ataqueInicial = true;
+            case 4: System.out.println("1 - SIM"); System.out.println("2 - NAO"); System.out.println("Escolha: ");      
+            int escolhaContinuar = ler.nextInt();
+
+            if (escolhaContinuar == 1){
+                guerreiro.vida = 100; guerreiro.forca = 0; guerreiro.nivel = 1; arqueiro.vida = 100; arqueiro.forca = 0; arqueiro.nivel = 1; 
+                System.out.println("Jogo reiniciado. Os personagens foram resetados!");
+                ataqueInicial = true;
+                
+            } else if (escolhaContinuar == 2){
+                System.out.println("Jogo encerrado!");
+                jogoLigado = false;
+            }
             break;
 
             case 5: jogoLigado = false; System.out.println("Jogo encerrado!");
@@ -66,14 +72,15 @@ public class Personagem_infos{
             }
 
             if (guerreiro.vida <= 0){
-                System.out.println("");
-                System.out.println("Você moreru! Fim de jogo");
+                System.out.println();
+                System.out.println("Você morreu! Fim de jogo");
                 jogoLigado = false;
+
             } else if (arqueiro.vida <= 0) {
-                System.out.println("");
-                System.out.println("Você venceu! O arqueiro foi derrotado");
+                System.out.println();
+                System.out.println("Você venceu! O arqueiro foi derrotado!");
                 jogoLigado = false;
-            }
+            }           
         }       
     }        
 }

@@ -7,7 +7,6 @@ public class Personagem{
     public int mana;
     public int forca = 0;
 
-    // Metodos (ação e comportamento)
     public void atacar(){
         if (classe.equals("Arqueiro")){
             System.out.println("- " +nome+ " atirou com sua flecha, causando 10 de dano!");
@@ -43,7 +42,7 @@ public class Personagem{
         forca += 1;
         nivel += 1;
 
-        System.out.println("- "+nome+" Subiu de nível! Recebeu: +1 de força, +5 de vida. Você agora está no nível "+nivel+" com " +forca+" de força");
+        System.out.println("- "+nome+" Subiu de nível! Recebeu: +1 de força, +5 de vida. Você agora está no nível "+nivel+", com " +forca+" de força e " +vida+ " de vida.");
     }
 
     public void mostrarStatus(){

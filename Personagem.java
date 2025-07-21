@@ -1,11 +1,56 @@
 public class Personagem{
 
-    public String nome;
-    public String classe = "Guerreiro";
-    public int nivel = 1;
-    public int vida = 100;
-    public int mana;
-    public int forca = 0;
+    private String nome;
+    private String classe;
+    private int nivel;
+    private int vida;
+    private int forca;
+
+    Personagem(){}
+
+    Personagem(String nome, String classe, int nivel, int vida, int forca){
+        this.nome = nome;
+        this.classe = classe;
+        this.nivel = nivel;
+        this.vida = vida;
+        this.forca = forca;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public String getClasse(){
+        return classe;
+    }
+    public void setClasse(String classe){
+        this.classe = classe;
+    }
+
+    public int getNivel(){
+        return nivel;
+    }
+    public void setNivel(int nivel){
+        this.nivel = nivel;
+    }
+
+    public int getVida(){
+        return vida;
+    }
+    public void setVida(int vida){
+        this.vida = vida;
+    }
+    
+    public int getForca(){
+        return forca;
+    }
+    public void setForca(int forca){
+        this.forca = forca;
+    }
+
 
     public void atacar(){
         if (classe.equals("Arqueiro")){

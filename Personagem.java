@@ -52,42 +52,30 @@ public class Personagem{
     }
 
 
-    public void atacar(){
-        if (classe.equals("Arqueiro")){
-            System.out.println("- " +nome+ " atirou com sua flecha, causando 10 de dano!");
-        } else if (classe.equals("Guerreiro")){
-            System.out.println("- " +nome+ " atacou com a sua espada, causando 8 de dano!");
-        }
+    public void LerAtaque(){
+        System.out.println("- Ataque: ");
+        //System.out.println("- " +nome+ " atirou com sua flecha, causando 10 de dano!");
+        //System.out.println("- " +nome+ " atacou com a sua espada, causando 8 de dano!");
     }
 
-    public void receberDano(int dano){
-        vida -= dano;
-        if (vida < 0){
-            vida = 0;
-        }
-        System.out.println("- "+nome+" foi atingido(a) e recebeu " +dano+" de dano. Vida atual "+vida+".");
+    public void receberDano(){
+        System.out.println("- Dano: ");
     }
     
     public void usarHabilidadeEspecial(){
-        if (classe.equals("Arqueiro")){
+        System.out.println( "- Habilidade Especial: ");
+
+        /*if (classe.equals("Arqueiro")){
             forca += 1;
             System.out.println( "- "+nome+"(" +classe+ ") usou seu Arco Ultimate causando 18 de dano!");
         } else if (classe.equals("Guerreiro")){
             forca += 2;
-            System.out.println("- " +nome+ "(" +classe+ ") revidou atacando com sua -Espada Fortificada- causando 15 de dano! Força aumentada em 2!");
-        }
-        return;
+            System.out.println("- " +nome+ "(" +classe+ ") revidou atacando com sua -Espada Fortificada- causando 15 de dano! Força aumentada em 2!");*/
     }
 
     public void subirNivel(){
-        vida += 5;
-        if (vida > 100){
-            vida = 100;
-        } 
-        forca += 1;
-        nivel += 1;
-
-        System.out.println("- "+nome+" Subiu de nível! Recebeu: +1 de força, +5 de vida. Você agora está no nível "+nivel+", com " +forca+" de força e " +vida+ " de vida.");
+        System.out.println("Subindo nivel: ");
+        //System.out.println("- "+nome+" Subiu de nível! Recebeu: +1 de força, +5 de vida. Você agora está no nível "+nivel+", com " +forca+" de força e " +vida+ " de vida.");
     }
 
     public void mostrarStatus(){

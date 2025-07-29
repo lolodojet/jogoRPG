@@ -74,18 +74,19 @@ public class Personagem{
     }
 
     public void subirNivel(){
-        System.out.println("Subindo nivel: ");
+        System.out.println("- Subindo nivel: ");
         //System.out.println("- "+nome+" Subiu de nível! Recebeu: +1 de força, +5 de vida. Você agora está no nível "+nivel+", com " +forca+" de força e " +vida+ " de vida.");
     }
 
     public void mostrarStatus(){
-        String mensagem = "Nome: " +nome+" | Classe: "+classe+" | Nível: "+nivel+" | Vida: "+vida+" | Força: "+forca;
-        System.out.println(mensagem);
+        System.out.println("- Mostrando Status: ");
+        //String mensagem = "Nome: " +nome+" | Classe: "+classe+" | Nível: "+nivel+" | Vida: "+vida+" | Força: "+forca;
+        //System.out.println(mensagem);
     }
 
     public void desenharPersonagem(){
 
-        if (classe.equals("Arqueiro")){
+        //if (classe.equals("Arqueiro")){
             System.out.println("    OOOO ");
             System.out.println("   O    O ");
             System.out.println("   O    O ");
@@ -102,7 +103,7 @@ public class Personagem{
             System.out.println("   OO   OO ");
             System.out.println("   OO   OO ");
 
-        } else if (classe.equals("Guerreiro")){
+        //} else if (classe.equals("Guerreiro")){
 
             System.out.println("    OOOO ");
             System.out.println("   O    O ");
@@ -121,4 +122,3 @@ public class Personagem{
             System.out.println("   OO   OO ");   
         }
     }
-}

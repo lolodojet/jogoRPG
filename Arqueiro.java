@@ -29,7 +29,26 @@ public class Arqueiro extends Personagem {
 
     @Override
     public void LerAtaque(){
-        System.out.println("- Ataque: ");
+        System.out.println("- Ataque Arqueiro: ");
     }
 
+    @Override
+    public void receberDano(){
+        System.out.println("- Arqueiro recebe dano: ");
+    }
+
+    @Override
+    public void usarHabilidadeEspecial(){
+        System.out.println("- Habilidade Especial (Arqueiro): ");
+    }
+
+    @Override
+    public void subirNivel(){
+        System.out.println("- Arqueiro subiu de nível: ");
+    }
+
+    @Override
+    public void mostrarStatus(){
+        System.out.println("- Status Arqueiro: ");
+    }
 }

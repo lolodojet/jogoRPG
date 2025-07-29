@@ -6,8 +6,13 @@ public class Personagem_infos{
     public static void main (String[] args){      
         Scanner ler = new Scanner(System.in);
 
-        Personagem arqueiro = new Personagem();
-        arqueiro.nome = "Garen";
+        System.out.println("== A Guerra Vai Começar ==");
+
+        Personagem personagem = new Personagem();
+        
+
+        Guerreiro guerreiro = new Guerreiro("Garen", "Guerreiro", 0, 0, 0,"Espada", "Encantada", false);
+        /*arqueiro.nome = "Garen";
         arqueiro.classe = "Arqueiro";
         arqueiro.forca = 0;
         System.out.println("O seu inimigo é: "+arqueiro.nome+" | Classe: "+arqueiro.classe+"| Força: "+arqueiro.forca);
@@ -81,6 +86,6 @@ public class Personagem_infos{
                 System.out.println("Você venceu! O arqueiro foi derrotado!");
                 jogoLigado = false;
             }           
-        }       
+        }*/       
     }        
 }

@@ -6,6 +6,14 @@ public class Guerreiro extends Personagem{
 
     Guerreiro(){}
 
+    Guerreiro (String nome, String classe, int nivel, int vida, int forca, String tipoDeArma, String armadura, boolean tempCargaGolpe){
+        super(nome, classe, nivel, vida, forca);
+
+        this.tipoDeArma = tipoDeArma;
+        this.armadura = armadura;
+        this.tempCargaGolpe = tempCargaGolpe;
+    }
+
     public String getTipoDeArma(){
         return tipoDeArma;
     }
@@ -27,5 +35,28 @@ public class Guerreiro extends Personagem{
         this.tempCargaGolpe = tempCargaGolpe;
     }
 
-    
+    @Override
+    public void LerAtaque(){
+        System.out.println("- Ataque Guerreiro: ");
+    }
+
+    @Override
+    public void receberDano(){
+        System.out.println("- Guerreiro recebe dano: ");
+    }
+
+    @Override
+    public void usarHabilidadeEspecial(){
+        System.out.println("- Habilidade Especial (Guerreiro): ");
+    }
+
+    @Override
+    public void subirNivel(){
+        System.out.println("- Guerreiro subiu de nível: ");
+    }
+
+    @Override
+    public void mostrarStatus(){
+        System.out.println("- Status Guerreiro: ");
+    }
 }

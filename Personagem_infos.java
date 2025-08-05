@@ -6,25 +6,28 @@ public class Personagem_infos{
     public static void main (String[] args){      
         Scanner ler = new Scanner(System.in);
 
+        Guerreiro guerreiro = new Guerreiro();
+        System.out.println("Informe o nome do seu guerreiro: ");
+        guerreiro.setNome(ler.nextLine());
+        guerreiro.setClasse("Guerreiro");
+        guerreiro.setNivel(1);
+        guerreiro.setVida(100);
+        guerreiro.setForca(0);
+        guerreiro.setTipoDeArma("Espada");
+        guerreiro.setArmadura("Encantada");
+
+        Arqueiro arqueiro = new Arqueiro();
+        arqueiro.setNome("Garen");
+        arqueiro.setClasse("Arqueiro");
+        arqueiro.setNivel(1);
+        arqueiro.setVida(100);
+        arqueiro.setForca(0);
+        arqueiro.setQuantidadeFlechas(10);
+        arqueiro.setPrecisao(3);
+        arqueiro.setFlechaEspecial("Flecha flamejante");
+
+
         System.out.println("== A Guerra Vai Começar ==");
-
-        Personagem personagem = new Personagem();
-        
-
-        Guerreiro guerreiro = new Guerreiro("Garen", "Guerreiro", 0, 0, 0,"Espada", "Encantada", false);
-        /*arqueiro.nome = "Garen";
-        arqueiro.classe = "Arqueiro";
-        arqueiro.forca = 0;
-        System.out.println("O seu inimigo é: "+arqueiro.nome+" | Classe: "+arqueiro.classe+"| Força: "+arqueiro.forca);
-        arqueiro.desenharPersonagem();
-        System.out.println();
-
-        Personagem guerreiro = new Personagem();
-        System.out.println("Informe o nome do seu herói: ");
-        guerreiro.nome = ler.nextLine();
-        System.out.println("- Herói criado: "+guerreiro.nome+"("+guerreiro.classe+") | Vida Inicial: "+guerreiro.vida+" | Força Inicial: "+guerreiro.forca);
-        guerreiro.desenharPersonagem();
-        System.out.println();
         
         boolean jogoLigado = true;
         boolean ataqueInicial = true;
@@ -32,15 +35,17 @@ public class Personagem_infos{
         while (jogoLigado){
 
             if (ataqueInicial){
-                arqueiro.atacar();
-                guerreiro.receberDano(10);
+                arqueiro.getFlechaEspecial();
+                arqueiro.setQuantidadeFlechas(7);
+                arqueiro.setPrecisao(2);
+                guerreiro.receberDano(8);
                 ataqueInicial = false;
             }
 
             System.out.println("=== MENU ===");
             System.out.println();
-            System.out.println("1 - Contra atacar?");
-            System.out.println("2 - Garen usou ultimate! Usar seu poder especial?");
+            System.out.println("1 - Garen atirou flechas flamejantes, contra ataque!");
+            System.out.println("2 - Revide o ataque especial de Garen, use sua ultimate!");
             System.out.println("3 - Ver status?");
             System.out.println("4 - Jogar de Novo?");
             System.out.println("5 - Sair?");
@@ -62,7 +67,7 @@ public class Personagem_infos{
             int escolhaContinuar = ler.nextInt();
 
             if (escolhaContinuar == 1){
-                guerreiro.vida = 100; guerreiro.forca = 0; guerreiro.nivel = 1; arqueiro.vida = 100; arqueiro.forca = 0; arqueiro.nivel = 1; 
+                guerreiro.setVida(100); guerreiro.setForca(0); guerreiro.setNivel(1); arqueiro.setVida(100); arqueiro.setForca(0); arqueiro.setNivel(1); 
                 System.out.println("Jogo reiniciado. Os personagens foram resetados!");
                 ataqueInicial = true;
                 
@@ -76,16 +81,16 @@ public class Personagem_infos{
             break;
             }
 
-            if (guerreiro.vida <= 0){
+            if (guerreiro.getVida() <= 0){
                 System.out.println();
                 System.out.println("Você morreu! Fim de jogo");
                 jogoLigado = false;
 
-            } else if (arqueiro.vida <= 0) {
+            } else if (arqueiro.getVida() <= 0) {
                 System.out.println();
                 System.out.println("Você venceu! O arqueiro foi derrotado!");
                 jogoLigado = false;
             }           
-        }*/       
+        }     
     }        
 }

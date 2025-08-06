@@ -8,6 +8,7 @@ public class Personagem_infos{
 
         Guerreiro guerreiro = new Guerreiro();
         guerreiro.desenharPersonagem();
+        System.out.println();
         System.out.println("Informe o nome do seu guerreiro: ");
         guerreiro.setNome(ler.nextLine());
         guerreiro.setClasse("Guerreiro");

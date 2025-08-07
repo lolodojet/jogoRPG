@@ -1,24 +1,16 @@
 public class Arqueiro extends Personagem {
 
-    private int quantidadeFlechas;
+
     private int precisao;
     private String flechaEspecial;
 
     Arqueiro(){}
 
-    Arqueiro (String nome, String classe, int nivel, int vida, int forca, int quantidadeFlechas, int precisao, String flechaEspecial){
+    Arqueiro (String nome, String classe, int nivel, int vida, int forca, int precisao, String flechaEspecial){
         super(nome, classe, nivel, vida, forca);
 
-        this.quantidadeFlechas = quantidadeFlechas;
         this.precisao = precisao;
         this.flechaEspecial = flechaEspecial;
-    }
-
-    public int getQuantidadeFlechas(){
-        return quantidadeFlechas;
-    }
-    public void setQuantidadeFlechas(int quantidadeFlechas){
-        this.quantidadeFlechas = quantidadeFlechas;
     }
 
     public int getPrecisao(){
@@ -37,7 +29,7 @@ public class Arqueiro extends Personagem {
 
     @Override
     public void atacar() {
-        System.out.println("Arqueiro atirou com sua flecha, causando 10 de dano!");
+        System.out.println("Arqueiro atirou com suas flechas flamejantes, causando 10 de dano!");
     }
 
     @Override
@@ -47,7 +39,7 @@ public class Arqueiro extends Personagem {
         } else {
             setVida(getVida() - dano);
         }
-        System.out.println("- " + getNome() + " foi atingido(a) e recebeu " + dano + " de dano. Vida atual " + getVida() + ".");
+        System.out.println("- " + getNome() + " foi atingido(a) e recebeu " + dano + " de dano. Vida atual " + getVida() + "." );
     }
 
     @Override

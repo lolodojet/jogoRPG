@@ -61,7 +61,7 @@ public class Guerreiro extends Personagem{
 
     @Override
     public void mostrarStatus() {
-        String mensagem = "Nome: " + getNome() + " | Classe: " + getClasse() + " | Nível: " + getNivel() + " | Vida: " + getVida() + " | Força: " + getForca();
+        String mensagem = "Status - Nome: " + getNome() + " | Classe: " + getClasse() + " | Nível: " + getNivel() + " | Vida: " + getVida() + " | Força: " + getForca();
         System.out.println(mensagem);
     }
 

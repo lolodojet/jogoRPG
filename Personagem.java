@@ -96,7 +96,7 @@ public class Personagem {
     }
 
     public void mostrarStatus() {
-        String mensagem = "Nome: " + nome + " | Classe: " + classe + " | Nível: " + nivel + " | Vida: " + vida
+        String mensagem = "Status - Nome: " + nome + " | Classe: " + classe + " | Nível: " + nivel + " | Vida: " + vida
                 + " | Força: " + forca;
         System.out.println(mensagem);
     }
